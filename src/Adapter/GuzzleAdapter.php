@@ -130,7 +130,7 @@ class GuzzleAdapter extends AbstractAdapter implements AdapterInterface
      * @return string
      * @throws GuzzleException
      */
-    public function delete($url, array $headers = [], $query_params = [])
+    public function delete($url, array $headers = [], array $query_params = [])
     {
         $options = ['headers' => $headers, 'query' => $query_params];
         $this->response = $this->client->request('DELETE', $this->getUrl() . $url, $options);
